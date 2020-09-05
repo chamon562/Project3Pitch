@@ -23,9 +23,8 @@ Provide information in the following sections:
 - Your Voice, is my ›❤ Sound<br>
 
 ## Who owns git Master repo on github ❥
-
-- Yoel Morad<br>
-  [Yoel's gitHub](https://github.com/yoel0)
+- Channee Math<br> 
+> [Channee's gitHub](https://github.com/chamon562)
 
 ## Team Name ❥
 
@@ -34,11 +33,11 @@ Provide information in the following sections:
 
 ## Team Member Roles ❥
 
-- gitMaster / FrontEnd / BackEnd
+- FrontEnd / BackEnd
 
   > Yoel "Sugar Honey Bunny" Morad<br> > [Yoel's gitHub](https://github.com/yoel0)
 
-- Organizer / FrontEnd / BackEnd
+- gitMaster / FrontEnd / BackEnd
 
   > Channee "Right Hand" Math<br> > [Channee's gitHub](https://github.com/chamon562)
 
@@ -67,35 +66,41 @@ With voiceS, you can express yourself freely and bring about creative freedom on
 (Recipe turned in to dishes)<br>
 (Template to document)<br>
 #FireSquad.
+<!-- back end stuff -->
+userSchema 
+<!-- parent -->
+- artistType: Array,
+- name: String,
+- email: String,
+- password: String,
+- post: [postSchema],
+- bio: Text,
+- birthday: Date,
+- profilePic: String,
+- content: Array
 
-User
 
-- Category
-- Name
-- Email
-- Password
-- Publications []
+postSchema
+<!-- child -->
+- user: String,
+- category: String,
+- title: String,
+- content: String,
+- textContent: Text,(specifically for long post)
+- comments: [commentSchema]
+- reactions: [reactionSchema]
 
-Publication
+commentSchema
+<!-- child -->
+- user: Array
+- content: Text,
+- reactions: [reactionSchema]
 
-- User
-- Category
-- Name (of Publication)
-- Content
-- Comments []
-- Reactions []
+<!-- reaction the child of comments and post define from the bottom up -->
+reactionSchema (Stretch but a really needed stretch for the honey effect)
 
-Comment
-
-- User
-- Content
-- Publication
-
-Reaction (Stretch but a really needed stretch for the honey effect)
-
-- User
-- Type (of Reaction)
-- Publication
+- user: Array (grab by user id and then display the user name)
+- type: Array (of Reaction, setting it to Array can have how many display at once)
 
 ---
 
@@ -107,6 +112,7 @@ Reaction (Stretch but a really needed stretch for the honey effect)
 > As a User I can Edit / Delete my own creative content.<br>
 > As a User I can comment on creative publications and Edit / Delete Comments.<br>
 > As a User I can react (reactions/type of likes) to creative publications.<br>
+
 
 ---
 
@@ -153,11 +159,11 @@ Reaction (Stretch but a really needed stretch for the honey effect)
 
 ##### Who is your Gitmaster? Who will be doing what?
 
-- gitMaster / FrontEnd / BackEnd
+- FrontEnd / BackEnd
 
   > Yoel "Sugar Honey Bunny" Morad<br> > [Yoel's gitHub](https://github.com/yoel0)
 
-- Organizer / FrontEnd / BackEnd
+- gitMaster / FrontEnd / BackEnd
 
   > Channee "Right Hand" Math<br> > [Channee's gitHub](https://github.com/chamon562)
 
